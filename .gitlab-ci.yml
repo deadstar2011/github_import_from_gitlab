@@ -5,9 +5,6 @@ deploy_staging:
   stage: deploy
   script:
     - echo "Deploy to staging server"
-  environment:
-    name: staging
-    url: https://staging.example.com
   when: manual
   only:
   - master
