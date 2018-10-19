@@ -8,5 +8,6 @@ deploy_staging:
   environment:
     name: staging
     url: https://staging.example.com
+  when: manual
   only:
   - master
