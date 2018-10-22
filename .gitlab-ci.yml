@@ -4,7 +4,7 @@ stages:
 deploy_staging:
   stage: deploy
   script:
-    - echo ${URL}
+    - set
   when: manual
   only:
   - master
