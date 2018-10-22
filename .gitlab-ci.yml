@@ -1,5 +1,13 @@
 stages:
+  - build
   - deploy
+
+build_staging:
+  stage: build
+  script:
+    - echo "build"
+  only:
+  - master
 
 deploy_staging:
   stage: deploy
