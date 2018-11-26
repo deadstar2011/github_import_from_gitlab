@@ -1,5 +1,9 @@
 stages:
   - build
+  - dddf
+  - fork
+  - gitlab
+  - build
   - deploy
 
 build_staging:
