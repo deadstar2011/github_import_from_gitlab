@@ -7,19 +7,11 @@ stages:
   - deploy
 
 
-dddf:
-  stage: dddf
-  script:
-    - echo "dddf"
-  only:
-  - merge_requests
-
 build_staging:
   stage: build
   script:
     - echo "build"
   only:
-  - merge_requests
   - master
 
 deploy_staging:
