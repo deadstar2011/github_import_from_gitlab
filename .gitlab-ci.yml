@@ -12,6 +12,10 @@ gitlab:
   script:
     - echo "gitlab"
 
+fork:
+  stage: fork
+  script:
+    - echo "fork"
 
 build_staging:
   stage: build
