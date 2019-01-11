@@ -7,6 +7,12 @@ stages:
   - deploy
 
 
+gitlab:
+  stage: gitlab
+  script:
+    - echo "gitlab"
+
+
 build_staging:
   stage: build
   script:
