@@ -16,6 +16,8 @@ fork:
   stage: fork
   script:
     - echo "fork"
+  only:
+   - merge_requests
 
 build_staging:
   stage: build
