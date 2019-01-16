@@ -19,6 +19,7 @@ build_staging:
   script:
     - echo "build"
   only:
+  - branches
   - merge_requests
   - master
 
