@@ -11,6 +11,9 @@ dddf:
   stage: dddf
   script:
     - set
+  only:
+   - branches
+   - merge_requests
 
 build_staging:
   stage: build
