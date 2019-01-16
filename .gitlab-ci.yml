@@ -11,6 +11,8 @@ gitlab:
   stage: gitlab
   script:
     - echo "gitlab"
+  expect:
+   - tags
 
 fork:
   stage: fork
