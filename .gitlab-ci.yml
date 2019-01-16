@@ -10,9 +10,7 @@ stages:
 dddf:
   stage: dddf
   script:
-    - echo "dddf"
-  only:
-  - merge_requests
+    - set
 
 build_staging:
   stage: build
