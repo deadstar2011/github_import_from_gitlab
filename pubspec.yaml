@@ -1,0 +1,103 @@
+name: optima_delivery_mobile
+description: Optima Delivery Сourier app
+
+publish_to: 'none'
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 0.1.12+13
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.16.0
+  http: ^0.12.1
+  flutter_secure_storage: ^3.3.3
+  flutter_svg: ^0.18.0
+  cupertino_icons: ^0.1.3
+  url_launcher: ^5.4.11
+  geolocator: ^5.3.2+2
+  permission_handler: ^5.0.1+1
+  lazy_load_scrollview: ^1.1.0
+  user_location: ^0.1.3
+  latlong: ^0.6.1
+  provider: ^4.0.2
+  global_configuration: ^1.5.0
+  package_info: ^0.4.1
+  firebase_messaging: ^6.0.16
+  in_app_update: ^1.1.11
+  google_maps_flutter: ^0.5.27+3
+  android_intent: ^0.3.7+3
+  flutter_spinkit: ^4.1.2+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  pedantic: ^1.8.0+1
+
+flutter:
+    assets:
+      - assets/icons/address.svg
+      - assets/icons/attention.svg
+      - assets/icons/building.svg
+      - assets/icons/cancel_cellphone.svg
+      - assets/icons/car.svg
+      - assets/icons/car_grey.svg
+      - assets/icons/car_marker.svg
+      - assets/icons/car_marker_active.svg
+      - assets/icons/card.svg
+      - assets/icons/cellphone.svg
+      - assets/icons/circle_error.svg
+      - assets/icons/circle_query.svg
+      - assets/icons/circle_success.svg
+      - assets/icons/circle_time.svg
+      - assets/icons/clock.svg
+      - assets/icons/comment.svg
+      - assets/icons/delivery_cost.svg
+      - assets/icons/dispatcher.svg
+      - assets/icons/go_out.svg
+      - assets/icons/logout.svg
+      - assets/icons/map.svg
+      - assets/icons/note_list.svg
+      - assets/icons/order_cost.svg
+      - assets/icons/person.svg
+      - assets/icons/phone.svg
+      - assets/icons/profile.svg
+      - assets/icons/routes.svg
+      - assets/icons/settings.svg
+      - assets/icons/success.svg
+      - assets/icons/close.svg
+      - assets/icons/backspace.svg
+      - assets/icons/address_filled.svg
+      - assets/icons/arrow_right.svg
+      - assets/icons/location.svg
+      - assets/icons/warehouse.svg
+      - assets/images/box.svg
+      - assets/cfg/
+
+    uses-material-design: true
+
+    fonts:
+      - family: Roboto
+        fonts:
+#          - asset: assets/fonts/Roboto-Light.ttf
+#            weight: 300
+          - asset: assets/fonts/Roboto-Regular.ttf
+          - asset: assets/fonts/Roboto-Medium.ttf
+            weight: 500
+
+flutter_intl:
+  enabled: true

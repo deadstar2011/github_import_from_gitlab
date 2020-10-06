@@ -1,0 +1,36 @@
+<svg width="50" height="52" viewBox="0 0 50 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="filter0_f" x="0" y="26" width="50" height="26" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="3" result="effect1_foregroundBlur"/>
+        </filter>
+        <filter id="filter1_f" x="9" y="29" width="32" height="20" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur"/>
+        </filter>
+        <linearGradient id="paint0_linear" x1="25" y1="46" x2="25" y2="30.0909" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#333333"/>
+            <stop offset="1" stop-color="#333333" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear" x1="25" y1="45" x2="25" y2="31.3636" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#333333"/>
+            <stop offset="1" stop-color="#333333" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <g opacity="0.2" filter="url(#filter0_f)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M25 46C12.3333 42.4572 6 39.5683 6 37.3333C6 34.3878 14.5066 32 25 32C35.4934 32 44 34.3878 44 37.3333C44 39.5192 37.6667 42.4081 25 46Z" fill="url(#paint0_linear)"/>
+    </g>
+    <g opacity="0.4" filter="url(#filter1_f)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M25 45C17 41.9633 13 39.4871 13 37.5714C13 35.0467 18.3726 33 25 33C31.6274 33 37 35.0467 37 37.5714C37 39.4451 33 41.9212 25 45Z" fill="url(#paint1_linear)"/>
+    </g>
+    <mask id="path-3-inside-1" fill="white">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M25 46C26.125 46 43 29 43 17.3176C43 7.75338 34.9411 0 25 0C15.0589 0 7 7.75338 7 17.3176C7 29 23.875 46 25 46Z"/>
+    </mask>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M25 46C26.125 46 43 29 43 17.3176C43 7.75338 34.9411 0 25 0C15.0589 0 7 7.75338 7 17.3176C7 29 23.875 46 25 46Z" fill="white"/>
+    <path d="M25 49C25.7842 49 26.3734 48.6937 26.4943 48.6332C26.7301 48.515 26.9351 48.3828 27.0863 48.2789C27.3966 48.0657 27.7265 47.8007 28.0485 47.5247C28.7052 46.962 29.5225 46.1871 30.4301 45.2607C32.2518 43.4012 34.548 40.8184 36.8064 37.8601C39.0597 34.9086 41.3231 31.521 43.0352 28.057C44.7263 24.6352 46 20.8998 46 17.3176H40C40 19.5767 39.1643 22.3471 37.6562 25.3986C36.1691 28.4076 34.1434 31.4605 32.0373 34.2193C29.9363 36.9713 27.8029 39.3686 26.1442 41.0618C25.3115 41.9117 24.6259 42.5561 24.1444 42.9687C23.8972 43.1804 23.7492 43.292 23.6888 43.3335C23.6546 43.357 23.7009 43.3217 23.807 43.2686C23.8612 43.2414 23.9744 43.1876 24.1324 43.136C24.2689 43.0914 24.5821 43 25 43V49ZM46 17.3176C46 5.9883 36.4877 -3 25 -3V3C33.3946 3 40 9.51845 40 17.3176H46ZM25 -3C13.5123 -3 4 5.9883 4 17.3176H10C10 9.51845 16.6054 3 25 3V-3ZM4 17.3176C4 20.8998 5.27372 24.6352 6.96483 28.057C8.67688 31.521 10.9403 34.9086 13.1936 37.8601C15.452 40.8184 17.7482 43.4012 19.5699 45.2607C20.4775 46.1871 21.2948 46.962 21.9515 47.5247C22.2735 47.8007 22.6034 48.0657 22.9137 48.2789C23.0649 48.3828 23.2699 48.515 23.5057 48.6332C23.6266 48.6937 24.2158 49 25 49V43C25.4179 43 25.7311 43.0914 25.8676 43.136C26.0256 43.1876 26.1388 43.2414 26.193 43.2686C26.2991 43.3217 26.3454 43.357 26.3112 43.3335C26.2508 43.292 26.1028 43.1804 25.8556 42.9687C25.3741 42.5561 24.6885 41.9117 23.8558 41.0618C22.1971 39.3686 20.0636 36.9713 17.9627 34.2193C15.8566 31.4605 13.8309 28.4076 12.3438 25.3986C10.8357 22.3471 10 19.5767 10 17.3176H4Z" fill="#5E77FF" mask="url(#path-3-inside-1)"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.5 9C32.16 9 32.72 9.42 32.92 10.01L35 16V25C35 25.55 34.55 26 34 26H33C32.45 26 32 25.55 32 25V24H18V25C18 25.55 17.55 26 17 26H16C15.45 26 15 25.55 15 25V16L17.08 10.01C17.29 9.42 17.84 9 18.5 9H31.5ZM30.9536 11H19.0464L18 14H32L30.9536 11Z" fill="#5E77FF"/>
+    <rect width="4" height="2" rx="1" transform="matrix(-1 0 0 1 22 18)" fill="white"/>
+    <rect width="4" height="2" rx="1" transform="matrix(-1 0 0 1 32 18)" fill="white"/>
+</svg>
