@@ -3,6 +3,6 @@ FROM cirrusci/flutter
 WORKDIR /data
 
 COPY production/configs/sh/start.sh /usr/bin/
-
+RUN chmod +x /usr/bin/start.sh
 CMD ["start.sh"]
 
