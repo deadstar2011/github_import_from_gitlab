@@ -1,6 +1,5 @@
 stages:
   - androbuild
-  - fastlane
   - build
 androbuild:
   stage: androbuild
@@ -14,7 +13,7 @@ androbuild:
   except:
     - schedules
 fastlane:
-  stage: fastlane
+  stage: androbuild
   tags:
     - android
   script: /test/android/fastlane.py
