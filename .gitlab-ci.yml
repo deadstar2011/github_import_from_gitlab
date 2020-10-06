@@ -1,5 +1,5 @@
 stages:
-#  - pipelines
+  - androbuild
   - build
 #pipelines:
 #  stage: pipelines
@@ -11,15 +11,29 @@ stages:
 #    - merge_requests
 #  except:
 #    - schedules
-build:
-  stage: build
+androbuild:
+  stage: androbuild
   tags:
   - android
   script: /test/android/androbuild.py
-  allow_failure: false
+  allow_failure: true
   only:
     - branches
     - merge_requests
   except:
     - schedules
-
+build:
+  stage: build
+  tags:
+    - old-other
+  only:
+    - master
+    - dev
+    - tag
+  except:
+    - schedules
+  variables:
+    CI_REGISTRY_PROJECT: ${CI_REGISTRY}/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}
+  script:
+    - docker build --no-cache --pull -f production/dockerfiles/flutter/Dockerfile -t "${CI_REGISTRY_PROJECT}/flutter:${CI_COMMIT_REF_NAME}" -t ${CI_REGISTRY_PROJECT}/flutter:${CI_COMMIT_REF_NAME} .
+    - docker push "${CI_REGISTRY_PROJECT}/flutter:${CI_COMMIT_REF_NAME}"; docker push "${CI_REGISTRY_PROJECT}/flutter:${CI_COMMIT_REF_NAME}"

@@ -1,7 +1,5 @@
-FROM cirrusci/flutter as build
+FROM cirrusci/flutter
 
-RUN mkdir /data
-#COPY . /data
 #RUN cd /data && \
 #    flutter clean  && \
 #    flutter pub get && \
