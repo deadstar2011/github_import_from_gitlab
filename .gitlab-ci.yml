@@ -12,17 +12,17 @@ androbuild:
     - merge_requests
   except:
     - schedules
-fastlane:
-  stage: androbuild
-  tags:
-    - android
-  script: /test/android/fastlane.py
-  allow_failure: true
-  only:
-    - branches
-    - merge_requests
-  except:
-    - schedules
+#fastlane:
+#  stage: androbuild
+#  tags:
+#    - android
+#  script: /test/android/fastlane.py
+#  allow_failure: true
+#  only:
+#    - branches
+#    - merge_requests
+#  except:
+#    - schedules
 build:
   stage: build
   tags:
