@@ -14,7 +14,7 @@ pipelines:
 build:
   stage: build
   tags:
-  - andriod
+  - android
   script: /pub/ci/andriod/andriod.py
   allow_failure: false
   only:
