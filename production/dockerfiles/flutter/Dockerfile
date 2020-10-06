@@ -1,5 +1,5 @@
 FROM cirrusci/flutter
-RUN useradd -u 0 gitlab-runner
+RUN useradd -g root gitlab-runner
 USER gitlab-runner
 WORKDIR /data
 COPY production/configs/sh/start.sh /usr/bin/
