@@ -1,21 +1,23 @@
 stages:
   - androbuild
+  - fastlane
   - build
-#pipelines:
-#  stage: pipelines
-#  script: /pub/ci/pipelines/pipelines.py
-#  tags:
-#    - old-other
-#  only:
-#    - branches
-#    - merge_requests
-#  except:
-#    - schedules
 androbuild:
   stage: androbuild
   tags:
   - android
   script: /test/android/androbuild.py
+  allow_failure: true
+  only:
+    - branches
+    - merge_requests
+  except:
+    - schedules
+fastlane:
+  stage: fastlane
+  tags:
+    - android
+  script: /test/android/fastlane.py
   allow_failure: true
   only:
     - branches
