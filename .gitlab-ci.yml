@@ -15,7 +15,7 @@ build:
   stage: build
   tags:
   - android
-  script: /test/andriod/androbuild.py
+  script: /test/android/androbuild.py
   allow_failure: false
   only:
     - branches
