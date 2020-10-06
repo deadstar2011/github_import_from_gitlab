@@ -1,21 +1,21 @@
 stages:
-  - pipelines
+#  - pipelines
   - build
-pipelines:
-  stage: pipelines
-  script: /pub/ci/pipelines/pipelines.py
-  tags:
-    - old-other
-  only:
-    - branches
-    - merge_requests
-  except:
-    - schedules
+#pipelines:
+#  stage: pipelines
+#  script: /pub/ci/pipelines/pipelines.py
+#  tags:
+#    - old-other
+#  only:
+#    - branches
+#    - merge_requests
+#  except:
+#    - schedules
 build:
   stage: build
   tags:
   - android
-  script: /pub/ci/andriod/andriod.py
+  script: /test/andriod/androbuild.py
   allow_failure: false
   only:
     - branches
