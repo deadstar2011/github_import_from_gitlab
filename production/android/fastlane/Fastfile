@@ -1,5 +1,5 @@
 # Update fastlane automatically
-update_fastlane
+#update_fastlane
 
 default_platform(:android)
 
@@ -25,4 +25,3 @@ platform :android do
       skip_upload_screenshots: true,
     )
   end
-end
