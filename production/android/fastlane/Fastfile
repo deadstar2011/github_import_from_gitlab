@@ -5,7 +5,7 @@ default_platform(:android)
 
 platform :android do
   desc "Build android aab"
-  lane :build_android
+  lane :build_android do
     # Build AAB
     sh "./flutter_build.sh"
   end
@@ -25,3 +25,4 @@ platform :android do
       skip_upload_screenshots: true,
     )
   end
+end
