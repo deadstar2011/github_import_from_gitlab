@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "api-8331683954095958539-151428",
+  "private_key_id": "abddf82a2ba982f56f863bc5931068e9520a165c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCvFB7x2ZL4pTQO\nwe8NieV8ujN6UshRHLsZJEd3CJjRpPdfMlGrznUfNYD6uH5PVQMlBmluvzDr0fnP\nIGxKix+YXnoyiSpqbScaIsIlvn5gSvSXLqF0jp7ew3QIJ6zMaHIhfPDqPrUcEfLG\n5IgYLtQGrz/BI5If30806dniCC/BiO69uUIIkpZBh6ywJYICOmr8XSHo52vZYfcV\nyPOSQoBaLL63C8fkVJzRzGhJ23U+vFDSPr3PQl0UtB4pONv6FkajOdH5Ie8tKOSu\nRldtXDtOX4Mmey9Oj8GcbuvO8CTihtt2TszIuLCol5sjms/c7wfOfPGRKhGFoLth\nGrRguBnJAgMBAAECggEASeYdy6qxKQeeSg5cx2OpvHRhzyOLDwWoCYwxKBK2YmMV\n0RZNt82czTAJwYpHMlgpTCMBNLA5x4gpP96pJuvDSc6zGIqiHyr0gskiFslp0V5C\nEGAr4SVj9JYeb2TDwMHjTrRMgis2yeLfjUkgEskNUMb/C5hmkNJyvdxpTclz0uW0\n1rjyo7sg8JwWYvYArNX721IzvxeVNIF9ZBawVedf6Hc0W8jopx3sT5Qi9wL7zxFn\nP5GUhQkVSekbugmHSa+RlMeE1dG9fJrPK/lN/s25LVQgNK/RmqIBm7OZfsjpMenP\nFQBPK8IMj6hnondzbyWcPTzyBT7LfW2IerCqGWmWIwKBgQDkbnWxKm3uKDNl0lC0\nqYYwhPO4fzJTCsiiy0VKHVAvYpWmlvmDsQ48XH2MhJqiyYFcgQsbVUwDp+s1Udot\nvEObrp+fkzE5cdqXskTuQYV9fxyHwZaKv82mj3vBlnMNi7n1lxw0FZBTlDhQciYw\n7356aCb6Fkuv7qZ25ffG1vdahwKBgQDENUnt+FSnLQlFGAdTRxr0g6Lj5/iylQCZ\nojQk57VfhWwU1d8meGQHUK35kE8p2MhYScWhoOnD09jyNvOdB+wFu7zagrdVmSxB\nfhABW+PrflacO5hZ9oSBkHi30snIWYaYzYztWWk5im5WM8VK2a5b49xhQ+rv8F/8\n+FtBu+VtLwKBgCwzN3CtfhHsE23rURR0DPQMdcBIVGt/Fa1yWZjqrR5OHBjc87DI\nrLF/UAfFjMpc5TwJ+CU0zv2SG0/445ef6xEPq/FLoOW1ow9hPjc/1F2hH9sg2UlF\nrbxB3TdrLh374GKl954YYhHaBz+BpuQnIzj6ODiB4elL60fsXZJK/Be3AoGBAL/w\nXV0VVEKiNPJJekkGQyE1cPDAabLRPmAMpDQCE5TZIY0UV5L7rObXDwoXGMoYDo0H\nxfTCRExUfmMcTJ6uND67lBiyTQTIrdl3p9KcgM9LrRBy4CwJk0BoAx/YbZq3sYrj\ncdxyXhRzDlL3nCYH4qBzvI/N8BM+s7f1gNhCJkLzAoGBAM3InsAqWhxUoOTYJAFo\njuMI4GnDh0N8Kx65rIRhp5qrTQ+On9gokL3MRVMXG2TsSLlMuW7GbhSFNu/YPSi6\nKZWXoAC/7kXhJP3YAQOu7XVe0Y8Lc66yLCLrdzBGRAE3VT+7ei3Bb1AJQ0qgiB0b\nv4nBMFavtcSLM/PTMCSmgoOP\n-----END PRIVATE KEY-----\n",
+  "client_email": "optima-delivery@api-8331683954095958539-151428.iam.gserviceaccount.com",
+  "client_id": "109369445111119400737",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/optima-delivery%40api-8331683954095958539-151428.iam.gserviceaccount.com"
+}
