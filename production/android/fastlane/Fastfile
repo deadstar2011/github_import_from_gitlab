@@ -20,7 +20,7 @@ platform :android do
       version_name: '0.1.12',
       version_code: '13',
       aab: '../build/app/outputs/bundle/release/app-release.aab',
-      mapping: '/build/app/outputs/mapping/release/mapping.txt',
+      mapping: '../build/app/outputs/mapping/release/mapping.txt',
       skip_upload_images: true,
       skip_upload_screenshots: true,
     )
