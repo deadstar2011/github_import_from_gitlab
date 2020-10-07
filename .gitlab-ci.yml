@@ -12,6 +12,7 @@ androbuild:
     - merge_requests
   except:
     - schedules
+  when: manual
 #fastlane:
 #  stage: androbuild
 #  tags:
