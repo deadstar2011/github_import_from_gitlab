@@ -5,7 +5,7 @@ androbuild:
   stage: androbuild
   tags:
   - android
-  script: /test/android/androbuild.py
+  script: /pub/ci/android/androbuild.py
   allow_failure: true
   only:
     - branches
@@ -38,7 +38,6 @@ build:
     CI_REGISTRY_PROJECT: ${CI_REGISTRY}/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}
   script:
     - docker build --no-cache --pull -f production/dockerfiles/flutter/Dockerfile -t "${CI_REGISTRY_PROJECT}/flutter:${CI_COMMIT_REF_NAME}" -t ${CI_REGISTRY_PROJECT}/flutter:${CI_COMMIT_REF_NAME} .
-    - docker push "${CI_REGISTRY_PROJECT}/flutter:${CI_COMMIT_REF_NAME}"; docker push "${CI_REGISTRY_PROJECT}/flutter:${CI_COMMIT_REF_NAME}"
-#    - docker build --no-cache --pull -f production/dockerfiles/fastlane/Dockerfile -t "${CI_REGISTRY_PROJECT}/fastlane:${CI_COMMIT_REF_NAME}" -t ${CI_REGISTRY_PROJECT}/fastlane:${CI_COMMIT_REF_NAME} .
-#    - docker push "${CI_REGISTRY_PROJECT}/fastlane:${CI_COMMIT_REF_NAME}"; docker push "${CI_REGISTRY_PROJECT}/fastlane:${CI_COMMIT_REF_NAME}"
+    - docker push "${CI_REGISTRY_PROJECT}/flutter:${CI_COMMIT_REF_NAME}"
+
   when: manual

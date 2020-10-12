@@ -10,12 +10,6 @@ platform :android do
     sh "./flutter_build.sh"
   end
 
-  desc "Build android aab"
-  lane :deploy_android_not_really do
-    # Build AAB
-    sh "./test.sh"
-  end
-
   desc "Deploy (Upload to play store)"
   lane :deploy_android do |options|
     upload_to_play_store(
