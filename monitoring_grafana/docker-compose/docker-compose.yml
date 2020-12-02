@@ -1,0 +1,60 @@
+version: '3.2'
+
+services:
+  cadvisor:
+    image: gcr.io/google-containers/cadvisor:latest
+    container_name: cadvisor
+    command:
+      - '--housekeeping_interval=15s'
+      - '--docker_only=true'
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /cgroup:/cgroup:ro
+    expose:
+      - 9100
+    restart: unless-stopped
+    networks:
+      monitoring:
+        ipv4_address: 10.227.86.2
+
+  caddy:
+    image: caddy
+    container_name: caddy
+    volumes:
+      - ./caddy/:/etc/caddy/
+    restart: unless-stopped
+    ports:
+      - 8019:8019
+      - 9100:9100
+    networks:
+      monitoring:
+        ipv4_address: 10.227.86.3
+
+  nodeexporter:
+    image: prom/node-exporter:latest
+    container_name: nodeexporter
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($$|/)'
+    expose:
+      - 8080
+    restart: unless-stopped
+    networks:
+      monitoring:
+        ipv4_address: 10.227.86.4
+
+networks:
+  monitoring:
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.227.86.0/24
