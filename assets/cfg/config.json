@@ -1,7 +1,0 @@
-{
-  "scheme": "https",
-  "host": "delivery-back.userstory.ru",
-  "osrmHost": "osrm.userstory.ru",
-  "osrmScheme": "http",
-  "isProduction": false
-}
