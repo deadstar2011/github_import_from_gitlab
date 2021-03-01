@@ -1,0 +1,89 @@
+#!/bin/bash
+#подсветка строк в выводе консоли
+RED='\033[0;31m'         #  ${RED}
+GREEN='\033[0;32m'      #  ${GREEN}
+
+# Имя контейнеров
+CONT_DB_NAME=  # контейнер с базой
+CONT_FPM_NAME= # контейнер с fpm
+
+# Имя базы данных
+DB_NAME=
+
+# Добавление хостов в etc/hosts
+if grep !"имя хоста" /etc/hosts; then
+  echo -e "IP-address		имя хоста" >> /etc/hosts
+fi
+
+
+# обнуление агрументов
+dump=$null
+migrate=$null
+upload=$null
+
+# определение ткущей папки
+pwd=$PWD
+curFolder=${PWD##*/}
+
+#проверка аргументов из консоли
+for param in "$@"
+do
+  case $param in
+    --dump) dump=true ;;
+    --migrate) migrate=true ;;
+    --upload) upload=true ;;
+  esac
+done
+
+#Запуск docker-compose
+if [ "$curFolder" = "develop" ]; then
+    echo "Current folder is develop"
+    chmod -R 644 deployer/configs/mysql-8.0/my.cnf
+    docker-compose pull
+    docker-compose up -d
+    sudo chmod -R 777 ../www ../protected
+else
+    echo "Current folder is not develop"
+    chmod -R 644 develop/deployer/configs/mysql-8.0/my.cnf
+    docker-compose -f develop/docker-compose.yml pull
+    docker-compose -f develop/docker-compose.yml --project-directory ./develop up -d
+    sudo chmod -R 777 ./www ./protected
+fi
+
+sleep 20
+
+if [ ${migrate} ]; then
+  echo -e "${RED}Накатываем миграции"
+  tput sgr0
+  docker exec -i ${CONT_FPM_NAME} sh -c 'php /data/protected/yiic migrate'
+fi
+
+if [ ${dump} ]; then
+  if [ "$curFolder" = "develop" ]; then
+    echo -e "${RED}Скачиваем дамп"
+    tput sgr0
+    rsync --info=progress2 -r dumps::dumps/${DB_NAME}/${DB_NAME}.sql dumps/${DB_NAME}.sql
+    echo -e "${RED}Выполняем накатывание дампа"
+    tput sgr0
+    docker exec -i ${CONT_DB_NAME} mysql -u root -p123 ${DB_NAME} < dumps/${DB_NAME}.sql;
+  else
+    echo -e "${RED}Скачиваем дамп"
+    tput sgr0
+    rsync --info=progress2 -r dumps::dumps/${DB_NAME}/${DB_NAME}.sql develop/dumps/${DB_NAME}.sql
+    echo -e "${RED}Выполняем накатывание дампа"
+    tput sgr0
+    docker exec -i ${CONT_DB_NAME} mysql -u root -p123 ${DB_NAME} < develop/dumps/${DB_NAME}.sql;
+  fi
+fi
+
+if [ ${upload} ]; then
+  if [ "$curFolder" = "develop" ]; then
+    echo -e "${RED}Скачиваем upload в папку protected"
+    tput sgr0
+    rsync --info=progress2 -r dumps.userstory::dumps/${DB_NAME}/upload/ ../protected/upload/
+  else
+    echo -e "${RED}Скачиваем upload в папку protected"
+    tput sgr0
+    rsync --info=progress2 -r dumps.userstory::dumps/${DB_NAME}/upload/ ./protected/upload/
+  fi
+fi
