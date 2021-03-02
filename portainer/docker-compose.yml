@@ -10,6 +10,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:rw
       - portainer_data:/data:rw
     restart: always
+    command: --admin-password '$$2y$$05$$cgH1gL5qh3rXknZYgRSCk.oZpmBwbCk76acg666uMiIv98K.s.Gqe'
 
 volumes:
   portainer_data:
